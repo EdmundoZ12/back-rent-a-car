@@ -15,6 +15,8 @@ import { DeliveryModule } from './delivery/delivery.module';
 import { GuaranteeModule } from './guarantee/guarantee.module';
 import { SeattlementModule } from './settlement/settlement.module';
 import { SeedModule } from './seed/seed.module';
+import { PrinterModule } from './printer/printer.module';
+import { ReportsModule } from './reports/reports.module';
 
 @Module({
   imports: [
@@ -38,6 +40,8 @@ import { SeedModule } from './seed/seed.module';
     GuaranteeModule,
     SeattlementModule,
     SeedModule,
+    PrinterModule,
+    ReportsModule,
   ],
   controllers: [],
   providers: [],

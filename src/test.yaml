@@ -1,0 +1,487 @@
+- galPosts:
+    Control: Gallery@2.15.0
+    Variant: Vertical
+    Properties:
+      Height: =Parent.Height
+      Items: =colReconocimientos
+      TemplatePadding: =12
+      TemplateSize: =If(Screen5.Size=1, 360, 320)
+      Width: =Parent.Width
+    Children:
+      - galPosts_Card:
+          Control: GroupContainer@1.5.0
+          Variant: AutoLayout
+          Properties:
+            DropShadow: =DropShadow.Semibold
+            Fill: =Color.White
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            AutoHeight: =true
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =16
+            PaddingBottom: =12
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =12
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Width: =Parent.Width-(galPosts.TemplatePadding*2)
+          Children:
+            - galPosts_Card_Tags:
+                Control: GroupContainer@1.5.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: =RGBA(0,0,0,0)
+                  Height: =40
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  Width: =Parent.Width
+                Children:
+                  - galPosts_Card_Tags_Tipo:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        AutoDisableOnSelect: =false
+                        BorderColor: =ColorValue("#2E7D4F")
+                        Color: =ColorValue("#2E7D4F")
+                        DisplayMode: =DisplayMode.View
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =
+                        HoverFill: =
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        PressedBorderColor: =
+                        PressedColor: =
+                        PressedFill: =
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Size: =11
+                        Text: =ThisItem.Tipo
+                        Width: =130
+                  - galPosts_Card_Tags_Categoria:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        AutoDisableOnSelect: =false
+                        BorderThickness: =0
+                        Color: =RGBA(90,90,90,1)
+                        DisplayMode: =DisplayMode.View
+                        Fill: =RGBA(229,231,235,1)
+                        Height: =30
+                        HoverBorderColor: =
+                        HoverColor: =
+                        HoverFill: =
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        PressedBorderColor: =
+                        PressedColor: =
+                        PressedFill: =
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Size: =11
+                        Text: =ThisItem.Categoria
+                        Width: =130
+            - galPosts_Card_User:
+                Control: GroupContainer@1.5.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: =RGBA(0,0,0,0)
+                  Height: =56
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =10
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  Width: =Parent.Width
+                Children:
+                  - galPosts_Card_User_Avatar:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        DisplayMode: =DisplayMode.View
+                        Fill: =ColorValue("#2E7D4F")
+                        Height: =44
+                        HoverBorderColor: =
+                        HoverColor: =
+                        HoverFill: =
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        PressedBorderColor: =
+                        PressedColor: =
+                        PressedFill: =
+                        RadiusBottomLeft: =22
+                        RadiusBottomRight: =22
+                        RadiusTopLeft: =22
+                        RadiusTopRight: =22
+                        Size: =13
+                        Text: =ThisItem.Iniciales
+                        Width: =44
+                  - galPosts_Card_User_Info:
+                      Control: GroupContainer@1.5.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(0,0,0,0)
+                        FillPortions: =1
+                        AutoHeight: =true
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                      Children:
+                        - galPosts_Card_User_Info_Nombre:
+                            Control: ModernText@1.0.0
+                            Properties:
+                              AutoHeight: =true
+                              FontWeight: =FontWeight.Bold
+                              LayoutMinHeight: =16
+                              LayoutMinWidth: =16
+                              Size: =16
+                              Text: =ThisItem.Nombre
+                              Width: =Parent.Width
+                        - galPosts_Card_User_Info_Puesto:
+                            Control: ModernText@1.0.0
+                            Properties:
+                              AutoHeight: =true
+                              Color: =RGBA(122,138,143,1)
+                              LayoutMinHeight: =16
+                              LayoutMinWidth: =16
+                              Size: =12
+                              Text: =ThisItem.Puesto
+                              Width: =Parent.Width
+            - galPosts_Card_ReconocidoPor:
+                Control: GroupContainer@1.5.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: =RGBA(0,0,0,0)
+                  Height: =28
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =6
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  Width: =Parent.Width
+                Children:
+                  - galPosts_Card_ReconocidoPor_Icon:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Height: =16
+                        Image: ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewBox='0 0 20 20' fill='#7A8A8F'><path d='M4 3a2 2 0 0 0-2 2v3.67c.29-.35.62-.66 1-.91V5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H9.24l-.24.33V15h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4Zm1 3.5c0-.28.22-.5.5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm.5 8.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm-2.5.24a4.48 4.48 0 0 0 5 0V18a.5.5 0 0 1-.8.4l-1.4-1.05a.5.5 0 0 0-.6 0L3.8 18.4A.5.5 0 0 1 3 18v-2.76ZM10.5 10a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4Z'/></svg>")
+                        Width: =16
+                  - galPosts_Card_ReconocidoPor_Lbl:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        Color: =RGBA(122, 138, 143, 1)
+                        FillPortions: =1
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Size: =11
+                        Text: ="Reconocido por " & ThisItem.ReconocidoPor
+            - galPosts_Card_Mensaje:
+                Control: ModernText@1.0.0
+                Properties:
+                  Align: =If(Screen5.Size=1, Align.Left, Align.Justify)
+                  AutoHeight: =true
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  PaddingBottom: =8
+                  PaddingTop: =4
+                  Size: =If(Screen5.Size=1, 13, 14)
+                  Text: =ThisItem.Mensaje
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =Parent.Width
+            - galPosts_Card_Divider:
+                Control: Rectangle@2.3.0
+                Properties:
+                  Fill: =ColorValue("#F0F0F0")
+                  Height: =1
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  Width: =Parent.Width
+            - galPosts_Card_Acciones:
+                Control: GroupContainer@1.5.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: =RGBA(0,0,0,0)
+                  Height: =44
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =12
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  Width: =Parent.Width
+                Children:
+                  - galPosts_Card_Acciones_Like:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Height: =26
+                        Image: ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewBox='0 0 20 20' fill='#000000'><path d='M10.05 2.3c.34-.98 1.63-1.43 2.43-.6.17.17.33.36.44.52.32.48.45 1.12.5 1.73.05.63.02 1.3-.05 1.91-.06.62-.16 1.18-.24 1.59v.05H14a3 3 0 0 1 2.95 3.54l-.69 3.76a4.5 4.5 0 0 1-5.6 3.53l-5.6-1.52a2.5 2.5 0 0 1-1.8-1.92l-.35-1.77c-.28-1.39.78-2.56 1.9-3 .33-.13.62-.3.85-.5 1.7-1.5 2.32-2.72 3.38-4.84.36-.71.72-1.68 1-2.49Zm1.97 5.58v-.04a13.7 13.7 0 0 0 .13-.58c.08-.4.17-.93.23-1.5.06-.58.09-1.18.04-1.73a2.73 2.73 0 0 0-.33-1.25 3.26 3.26 0 0 0-.33-.39c-.2-.2-.63-.16-.76.23-.29.82-.67 1.83-1.05 2.6-1.07 2.14-1.76 3.5-3.62 5.15-.34.3-.74.52-1.13.68-.88.34-1.45 1.14-1.3 1.87l.35 1.77c.11.56.53 1 1.08 1.15l5.6 1.53c1.98.54 4-.73 4.36-2.75l.68-3.76a2 2 0 0 0-1.96-2.36h-1.5a.5.5 0 0 1-.5-.62Z'/></svg>")
+                        Width: =26
+                  - galPosts_Card_Acciones_LikeNum:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Size: =13
+                        Text: ="14"
+                  - galPosts_Card_Acciones_Dislike:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Height: =26
+                        Image: ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='40px' height='40px' viewBox='0 0 20 20' fill='#000000'><path d='M10.05 17.7c.34.98 1.63 1.43 2.43.6.17-.17.33-.36.44-.52.32-.48.45-1.12.5-1.73.05-.63.02-1.3-.05-1.92-.06-.6-.16-1.17-.24-1.58v-.05H14a3 3 0 0 0 2.95-3.54l-.69-3.76a4.5 4.5 0 0 0-5.6-3.54L5.06 3.2c-.92.25-1.62 1-1.8 1.92l-.35 1.77c-.28 1.39.78 2.56 1.9 3 .33.13.62.3.85.5 1.7 1.5 2.32 2.72 3.38 4.84.36.71.72 1.68 1 2.49Zm1.97-5.58v.04a14.2 14.2 0 0 1 .36 2.08c.06.58.09 1.18.04 1.73-.04.55-.15.98-.33 1.25-.06.1-.18.22-.33.39-.2.2-.63.16-.76-.23-.29-.82-.67-1.83-1.05-2.6-1.07-2.14-1.76-3.5-3.62-5.15-.34-.3-.74-.52-1.13-.68-.88-.34-1.45-1.14-1.3-1.87l.35-1.77c.11-.56.53-1 1.08-1.15l5.6-1.53a3.5 3.5 0 0 1 4.36 2.75l.68 3.76a2 2 0 0 1-1.96 2.36h-1.5a.5.5 0 0 0-.5.62Z'/></svg>")
+                        Width: =26
+                  - galPosts_Card_Acciones_DislikeNum:
+                      Control: ModernText@1.0.0
+                      Properties:
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Size: =13
+                        Text: ="1"
+                  - galPosts_Card_Acciones_Comments:
+                      Control: GroupContainer@1.5.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(0,0,0,0)
+                        FillPortions: =1
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        LayoutGap: =6
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                      Children:
+                        - galPosts_Card_Acciones_Comments_Icon:
+                            Control: Image@2.2.3
+                            Properties:
+                              Height: =26
+                              Image: |
+                                ="data:image/svg+xml," & EncodeUrl("
+                                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='40px' height='40px'>
+                                  <style>
+                                    .chat-bubble" & gblChatTimestamp & " {
+                                      fill: none;
+                                      stroke: #2E7D4F;
+                                      stroke-width: 2;
+                                      stroke-linecap: round;
+                                      stroke-linejoin: round;
+                                    }
+                                    .chat-dot" & gblChatTimestamp & " {
+                                      fill: #2E7D4F;
+                                      animation-name: chatDotBounce;
+                                      animation-duration: " & If(IsBlank(gblChatState), "0ms", "600ms") & ";
+                                      animation-timing-function: ease-in-out;
+                                      animation-iteration-count: infinite;
+                                    }
+                                    .chat-dot1" & gblChatTimestamp & " { animation-delay: 0ms; }
+                                    .chat-dot2" & gblChatTimestamp & " { animation-delay: 150ms; }
+                                    .chat-dot3" & gblChatTimestamp & " { animation-delay: 300ms; }
+                                    @keyframes chatDotBounce {
+                                      0%, 100% { transform: translateY(0); }
+                                      50% { transform: translateY(-3px); }
+                                    }
+                                  </style>
+                                  <path class='chat-bubble" & gblChatTimestamp & "' d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' />
+                                  <circle class='chat-dot" & gblChatTimestamp & " chat-dot1" & gblChatTimestamp & "' cx='8' cy='10' r='1.2' />
+                                  <circle class='chat-dot" & gblChatTimestamp & " chat-dot2" & gblChatTimestamp & "' cx='12' cy='10' r='1.2' />
+                                  <circle class='chat-dot" & gblChatTimestamp & " chat-dot3" & gblChatTimestamp & "' cx='16' cy='10' r='1.2' />
+                                </svg>
+                                ")
+                              OnSelect: |-
+                                =If(
+                                    CountRows(Filter(colExpandidos, PostID = ThisItem.Id)) > 0,
+                                    RemoveIf(colExpandidos, PostID = ThisItem.Id),
+                                    Collect(colExpandidos, {PostID: ThisItem.Id})
+                                );
+                                Set(gblChatTimestamp, Text(Now(), "yyyymmddhhmmss"))
+                              Width: =26
+                        - galPosts_Card_Acciones_Comments_Lbl:
+                            Control: ModernText@1.0.0
+                            Properties:
+                              Color: =ColorValue("#2E7D4F")
+                              FontWeight: =FontWeight.Bold
+                              LayoutMinHeight: =16
+                              LayoutMinWidth: =16
+                              Size: =13
+                              Text: =ThisItem.Comentarios & " comentarios"
+            - galPosts_Card_Comments:
+                Control: GroupContainer@1.5.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Fill: =RGBA(0,0,0,0)
+                  AutoHeight: =true
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutGap: =8
+                  LayoutMinHeight: =16
+                  LayoutMinWidth: =16
+                  PaddingTop: =8
+                  Visible: =CountRows(Filter(colExpandidos, PostID = ThisItem.Id)) > 0
+                  Width: =Parent.Width
+                Children:
+                  - galPosts_Card_Comments_List:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        BorderColor: =RGBA(0,0,0,0)
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =Min(CountRows(Filter(colComentarios, PostID = ThisItem.Id)) * 64, 200)
+                        Items: =Filter(colComentarios, PostID = ThisItem.Id)
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        ShowScrollbar: =true
+                        TemplatePadding: =4
+                        TemplateSize: =60
+                        Width: =Parent.Width
+                      Children:
+                        - galPosts_Card_Comments_List_Item:
+                            Control: GroupContainer@1.5.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Fill: =RGBA(0,0,0,0)
+                              LayoutAlignItems: =LayoutAlignItems.Center
+                              AutoHeight: =true
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutGap: =8
+                              LayoutMinHeight: =16
+                              LayoutMinWidth: =16
+                              Width: =Parent.Width
+                            Children:
+                              - galPosts_Card_Comments_List_Item_Avatar:
+                                  Control: Classic/Button@2.2.0
+                                  Properties:
+                                    DisplayMode: =DisplayMode.View
+                                    Fill: =ThisItem.AvatarColor
+                                    Height: =32
+                                    HoverBorderColor: =
+                                    HoverColor: =
+                                    HoverFill: =
+                                    PressedBorderColor: =
+                                    PressedColor: =
+                                    PressedFill: =
+                                    RadiusBottomLeft: =16
+                                    RadiusBottomRight: =16
+                                    RadiusTopLeft: =16
+                                    RadiusTopRight: =16
+                                    Size: =10
+                                    Text: =ThisItem.Iniciales
+                                    Width: =32
+                              - galPosts_Card_Comments_List_Item_Bubble:
+                                  Control: GroupContainer@1.5.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.None
+                                    Fill: =RGBA(247,248,250,1)
+                                    FillPortions: =1
+                                    AutoHeight: =true
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =16
+                                    LayoutMinWidth: =16
+                                    PaddingBottom: =6
+                                    PaddingLeft: =10
+                                    PaddingRight: =10
+                                    PaddingTop: =6
+                                    RadiusBottomLeft: =12
+                                    RadiusBottomRight: =12
+                                    RadiusTopLeft: =12
+                                    RadiusTopRight: =12
+                                  Children:
+                                    - galPosts_Card_Comments_List_Item_Bubble_Header:
+                                        Control: ModernText@1.0.0
+                                        Properties:
+                                          AutoHeight: =true
+                                          FontWeight: =FontWeight.Bold
+                                          LayoutMinHeight: =16
+                                          LayoutMinWidth: =16
+                                          Size: =11
+                                          Text: =ThisItem.Nombre & "  ·  " & ThisItem.Fecha
+                                          Width: =Parent.Width
+                                    - galPosts_Card_Comments_List_Item_Bubble_Txt:
+                                        Control: ModernText@1.0.0
+                                        Properties:
+                                          AutoHeight: =true
+                                          Color: =RGBA(60,60,60,1)
+                                          LayoutMinHeight: =16
+                                          LayoutMinWidth: =16
+                                          Size: =11
+                                          Text: =ThisItem.Comentario
+                                          Width: =Parent.Width
+                  - galPosts_Card_Comments_Input:
+                      Control: GroupContainer@1.5.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =44
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        LayoutGap: =8
+                        LayoutMinHeight: =16
+                        LayoutMinWidth: =16
+                        Width: =Parent.Width
+                      Children:
+                        - galPosts_Card_Comments_Input_Field:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(229,231,235,1)
+                              FillPortions: =1
+                              Height: =38
+                              HintText: ="Escribe un comentario..."
+                              LayoutMinHeight: =16
+                              LayoutMinWidth: =16
+                              RadiusBottomLeft: =19
+                              RadiusBottomRight: =19
+                              RadiusTopLeft: =19
+                              RadiusTopRight: =19
+                              Size: =12
+                        - galPosts_Card_Comments_Input_Btn:
+                            Control: Classic/Button@2.2.0
+                            Properties:
+                              Fill: =ColorValue("#2E7D4F")
+                              Height: =38
+                              HoverBorderColor: =
+                              HoverColor: =ColorValue("#ffffff")
+                              HoverFill: =ColorValue("#236040")
+                              LayoutMinHeight: =16
+                              LayoutMinWidth: =16
+                              OnSelect: |-
+                                =If(
+                                    !IsBlank(galPosts_Card_Comments_Input_Field.Text),
+                                    Collect(colComentarios,
+                                        {
+                                            ID: CountRows(colComentarios)+1,
+                                            PostID: ThisItem.Id,
+                                            Iniciales: "YO",
+                                            Nombre: "Mi Nombre",
+                                            Comentario: galPosts_Card_Comments_Input_Field.Text,
+                                            Fecha: "ahora",
+                                            AvatarColor: RGBA(46,125,79,1)
+                                        }
+                                    );
+                                    Reset(galPosts_Card_Comments_Input_Field)
+                                )
+                              PressedBorderColor: =
+                              PressedColor: =
+                              PressedFill: =ColorValue("#1a4a30")
+                              RadiusBottomLeft: =19
+                              RadiusBottomRight: =19
+                              RadiusTopLeft: =19
+                              RadiusTopRight: =19
+                              Text: ="Enviar"
+                              Width: =72
